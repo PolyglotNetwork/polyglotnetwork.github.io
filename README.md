@@ -1,37 +1,7 @@
-## Welcome to GitHub Pages
+## About
 
-You can use the [editor on GitHub](https://github.com/PolyglotNetwork/polyglotnetwork.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Open-source software, due to its positive externality, remains under-supplied and under-utilized. We intend to solve this problem using network effects. Essentially, companies can get developers to improve their FOSS dependencies by paying only a fraction of the cost of doing it in-house.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+We are currently working with a closed set of customers but will be opening for public signups soon.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/PolyglotNetwork/polyglotnetwork.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+If you are a developer interested in working on open-source software with us, you should [join our developer community](https://community.polyglot.network/).
