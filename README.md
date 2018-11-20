@@ -4,4 +4,4 @@ Open-source software, due to its positive externality, remains under-supplied an
 
 We are currently working with a closed set of customers but will be opening for public signups soon. Please mail me at _hi@nileshtrivedi.com_ for any queries.
 
-If you are a developer interested in working on open-source software with us, you should [join our developer community](https://community.polyglot.network/).
+If you are a developer interested in working on open-source software with us, you should [join our developer community](https://discord.gg/p8QRftG).
