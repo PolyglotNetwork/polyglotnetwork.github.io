@@ -1,0 +1,14 @@
+.clientlogo {
+	color: grey;
+	font-size: 2.0em;
+	font-style: italic;
+	font-family: 'Just Another Hand', cursive;
+}
+
+.pricing-table-inner::before {
+	box-shadow: 0 16px 48px #4E5C84;
+}
+
+.testimonial-inner::before {
+	box-shadow: 0 16px 48px #4E5C84;
+}
