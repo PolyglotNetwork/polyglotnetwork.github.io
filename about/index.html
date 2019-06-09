@@ -1,31 +1,76 @@
 <!DOCTYPE html>
 <html lang='en'>
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141373789-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-141373789-1');
+    </script>
+
     <title>Polyglot.Network :: About</title>
     <link id='stylesheet' rel='stylesheet' href='/dist/css/water.css'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Polyglot.Network - An open-source software development agency">
+    <meta name="description" content="Send the links to open-source bugs and feature that you care about and we'll fix those at a fraction of the cost of you doing it in-house.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://polyglot.network/">
+    <meta property="og:title" content="Polyglot.Network - An open-source software development agency">
+    <meta property="og:description" content="Send the links to open-source bugs and feature that you care about and we'll fix those at a fraction of the cost of you doing it in-house.">
+    <meta property="og:image" content="https://polyglot.network/polyglotlogo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://polyglot.network/">
+    <meta property="twitter:title" content="Polyglot.Network - An open-source software development agency">
+    <meta property="twitter:description" content="Send the links to open-source bugs and feature that you care about and we'll fix those at a fraction of the cost of you doing it in-house.">
+    <meta property="twitter:image" content="https://polyglot.network/polyglotlogo.png">
+
+    <style type="text/css">
+      body { font-size: 110%; }
+    </style>
   </head>
   <body>
-  	<h1>Polyglot.Network</h1>
+  	<h1><a href="/">Polyglot.Network</a></h1>
   	<h3>Making open-source development work for businesses</h3>
 
-  	<p>Open-source software suffers from a tragedy of commons. Since the benefits are diffused and costs are concentrated, it does not receive the investment that's proportionate to the amount of value it generates for its users. I mean, things really are in a bad shape. Just see this, this and this.</p>
+  	<p>Open-source software suffers from a tragedy of commons. Since <b>the benefits are diffused and costs are concentrated</b>, it does not receive the investment that's proportionate to the amount of value it generates for its users. Things really are in a bad shape.</p>
 
-  	<p>Like all tragedies of commons, this cannot be solved by individual effort. If you do OSS development in-house, you'd be burning money for little return on investment. And if you do contribute to FOSS, the return-on-investment is only justified when the value delivered to YOU is more than your cost. If a feature or bugfix, that costs 1,000$ but generates 800$ of value for 100 businesses, your RoI would still be a lost of 20%</p>
+    <div><img src="/costbenefit1.png"/></div>
 
-  	<p>What's usually needed to get out of such logjams is <i>coordination</i> - either by regulations or by network effects. We're a FOSS-only software development agency who's trying to make the latter work by distributing costs over multiple customers.</p>
+  	<p>Like all tragedies of commons, this cannot be solved merely by private efforts. If you do OSS development in-house, you'd be burning money for little return on investment. If a feature or bugfix, that costs 1,000$ but generates 800$ of value for 100 businesses, your personal RoI would still be a <b>loss of 20%</b>.</p>
 
-  	<p>We work pretty much like a software development agency. Your team sends a list of issues in your open-source software dependencies that matter to you, your CTO allocates a budget and sets priorities. What's different though is that we pick up the tasks for which we can find multiple customers. If you want a new feature in Django which is popular, you'll get this at a fraction of the cost. But if you want us to improve some obscure library, the pricing adjusts in proportion.</p>
+    <div><img src="/costbenefit2.png"/></div>
 
-  	<p>We reduce the costs further by leveraging a community of remote, part-time developers, including the open-source maintainers and developers themselves.</p>
+  	<p>What's usually needed to get out of such logjams is <i>coordination</i> - either by regulations or by network effects. We're a FOSS-only software development agency who's trying to make network effects work by distributing costs over multiple customers.</p>
+
+  	<p>We work pretty much like a software development agency. <b><big>Your team sends a list of issues in your open-source software dependencies that matter to you, your CTO allocates a budget and sets priorities</big></b>. What's different though is that we pick up the tasks for which we can find multiple customers. If you want a new feature in Django which is popular, you'll get this at a fraction of the cost. But if you want us to improve some obscure library, the pricing adjusts in proportion.</p>
+
+  	<p>We reduce the costs further by leveraging <b><big>a community of remote, part-time developers</big></b>, including the open-source maintainers and developers themselves.</p>
+
+    <div><img src="/howitworks.png"/></div>
 
   	<p>Now, there are some key things to keep in mind. Our pricing model has two components. Part of the payment is about developing the feature in our own branch. This is in our control and once we have picked up this task, we can guarantee delivering at least this much. However, due to the nature of open-source, we cannot always guarantee that our changes will be merged in the upstream repository. Perhaps the developers of the FOSS project don't want to cannibalize their premium, non-FOSS version, or perhaps they disagree with the approach of our implementation and so on. This risk is very real.</p>
 
-  	<p>This is where our pricing model comes in for aligning incentives. We receive 30% of the cost ONLY if our work gets accepted in the upstream repo. This is the model we've found to work for both us and our clients to make this a sustainable offering. On a standalone basis, this would be too risky for us. We solve this via volume using a seat-based pricing model which guarantees us some consistency of work. To use some rough numbers, you pay us 1/3rd of a full-time developer's cost but get 2/3rd of their output in return. And what's more: All the work produced in this way, remains open-source. We are a bit picky in choosing our clients and are only interested in working with businesses which uses enough open-source software that can justify at least one employee worth of effort per month.</p>
+  	<p>This is where our pricing model comes in for aligning incentives. We receive 30% of the cost ONLY if our work gets accepted in the upstream repo. This is the model we've found to work for both us and our clients to make this a sustainable offering. On a standalone basis, this would be too risky for us. We solve this via volume using a seat-based pricing model which guarantees us some consistency of work. To use some rough numbers, <b><big>you pay us 1/3rd of a full-time, in-house developer's cost but get 2/3rd of their output in return</big></b>. And what's more: All the work produced in this way, remains open-source. We are a bit picky in choosing our clients and are only interested in working with businesses which uses enough open-source software that can justify at least one employee worth of effort per month.</p>
 
-  	<p>By leveraging remote part-time developers from across the world, and by distributing the cost of FOSS development across multiple customers, we're able to reduce our costs to a fraction of what it would cost you to do this kind of development in-house. Have a look at our pricing.</p>
+  	<p>By leveraging remote part-time developers from across the world, and by distributing the cost of FOSS development across multiple customers, we're able to reduce our costs to a fraction of what it would cost you to do this kind of development in-house.</p>
 
   	<p>We've been working with a few customers already and we'll be publishing their case studies soon. Meanwhile, if you'd like to talk, <a href="mailto:team@polyglot.network">get in touch</a>.</p>
+
+    <p>:-)</p>
+
+    <form action="https://polyglot.network/" method="get" style="display: inline"><input type="submit" style="background-color: #3369d6; color: white" value="Visit Homepage"/></form>
+
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
 
   </body>
 </html>
