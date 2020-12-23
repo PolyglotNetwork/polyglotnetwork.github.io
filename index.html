@@ -1,464 +1,381 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Polyglot.Network</title>
-    <link href="https://fonts.googleapis.com/css?family=Hind+Vadodara:400,600,700|Frank+Ruhl+Libre:700|Just+Another+Hand" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/style.css">
-    <link rel="stylesheet" href="dist/css/custom.css">
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polyglot.Network - Open-source software development agency</title>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="https://unpkg.com/twinklecss@1.2.0/twinkle.min.css">
 </head>
-<body class="is-boxed has-animations">
-    <div class="body-wrap boxed-container">
-        <header class="site-header">
-			<div class="header-sun is-revealing">
-				<svg width="191" height="201" xmlns="http://www.w3.org/2000/svg">
-					<defs>
-						<linearGradient x1="50%" y1="0%" x2="4.666%" y2="38.561%" id="header-sun-c">
-							<stop stop-color="#FFE4A2" offset="0%"/>
-							<stop stop-color="#FFC570" offset="100%"/>
-						</linearGradient>
-					</defs>
-						<path d="M78.72 44.447c-4.177 0-7.78 1.319-11.782 1.95-4.106.648-9.151-3.22-13.021-1.96-3.936 1.282-8.109 2.748-11.746 4.608-3.673 1.88-7.553 4.062-10.865 6.474-3.327 2.424-5.517 6.524-8.42 9.428-2.904 2.904-4.246 7.103-6.669 10.429-2.413 3.312-3.311 7.25-5.19 10.924-1.861 3.637-2.448 7.345-3.729 11.28-1.26 3.87-4.385 6.987-5.033 11.092C1.634 112.674 0 116.604 0 120.78c0 4.177.694 8.255 1.325 12.257.648 4.106-.786 8.865.474 12.734 1.282 3.936 2.97 8.102 4.831 11.74 1.879 3.673 6.753 5.67 9.166 8.98 2.423 3.328 4.466 6.94 7.37 9.843 2.905 2.905 5.4 6.48 8.726 8.904 3.312 2.413 8.601 1.5 12.274 3.378 3.637 1.862 6.108 6.328 10.044 7.61 3.87 1.26 8.387-.215 12.492.432 4.002.632 7.841 4.102 12.018 4.102 4.177 0 8.403-1.013 12.405-1.644 4.106-.648 7.963-2.465 11.833-3.726 3.936-1.281 6.808-4.661 10.445-6.522 3.673-1.88 6.36-4.613 9.672-7.025 3.327-2.424 7.491-3.41 10.395-6.313 2.904-2.904 8.919-3.404 11.343-6.73 2.412-3.312 1.89-8.756 3.769-12.43 1.861-3.636 2.752-7.648 4.034-11.585a76.417 76.417 0 0 0 2.852-11.85c.631-4.002 3.319-7.978 3.319-12.155 0-4.176-.643-8.475-1.274-12.477-.648-4.106-.354-8.728-1.614-12.598-1.282-3.935-4.11-7.567-5.97-11.204-1.879-3.674-3.522-7.832-5.935-11.144-2.423-3.327-8.219-3.824-11.123-6.728s-2.893-9.397-6.22-11.821c-3.311-2.412-9.742.089-13.415-1.79-3.637-1.861-5.739-7.418-9.675-8.7-3.87-1.26-8.789 1.68-12.894 1.032-4.002-.631-7.77-.903-11.947-.903" fill="#FFF6E7"/>
-						<path d="M105.648 11.47c-4.177 0-7.78 1.319-11.782 1.95-4.106.648-9.151-3.22-13.021-1.96-3.936 1.282-8.109 2.748-11.746 4.608-3.673 1.88-7.553 4.062-10.865 6.474-3.327 2.424-5.517 6.524-8.42 9.428-2.904 2.904-4.246 7.103-6.669 10.429-2.413 3.312-3.311 7.25-5.19 10.924-1.861 3.637-2.448 7.345-3.729 11.281-1.26 3.869-4.385 6.986-5.033 11.091-.631 4.002-2.265 7.932-2.265 12.108 0 4.177.694 8.255 1.325 12.257.648 4.106-.786 8.865.474 12.734 1.282 3.936 2.97 8.102 4.831 11.74 1.879 3.673 6.753 5.67 9.166 8.981 2.423 3.327 4.466 6.939 7.37 9.842 2.905 2.905 5.4 6.481 8.726 8.904 3.312 2.413 8.601 1.5 12.274 3.378 3.637 1.862 6.108 6.328 10.044 7.61 3.87 1.26 8.387-.215 12.492.432 4.002.632 7.841 4.102 12.018 4.102 4.177 0 8.403-1.013 12.405-1.644 4.106-.648 7.963-2.465 11.833-3.726 3.936-1.281 6.808-4.661 10.445-6.522 3.673-1.879 6.36-4.613 9.672-7.025 3.327-2.424 7.491-3.409 10.395-6.313s8.919-3.404 11.343-6.73c2.412-3.312 1.89-8.756 3.769-12.43 1.861-3.636 2.752-7.648 4.034-11.585a76.417 76.417 0 0 0 2.852-11.85c.631-4.002 3.319-7.978 3.319-12.155 0-4.176-.643-8.475-1.274-12.477-.648-4.106-.354-8.728-1.614-12.598-1.282-3.935-4.11-7.567-5.97-11.204-1.879-3.674-3.522-7.832-5.935-11.144-2.423-3.327-8.219-3.824-11.123-6.728s-2.893-9.397-6.22-11.821c-3.311-2.412-9.742.089-13.415-1.79-3.637-1.861-5.739-7.418-9.675-8.7-3.87-1.26-8.789 1.68-12.894 1.032-4.002-.631-7.77-.903-11.947-.903m0 165c-4.179 0-8.742.7-12.764.125-4.119-.59-7.195-6.328-11.108-7.478-3.979-1.17-7.496-2.761-11.215-4.466-3.759-1.723-7.025-3.719-10.473-5.941-3.467-2.236-7.628-3.244-10.733-5.939-3.111-2.699-7.273-4.441-9.972-7.551-2.694-3.105-6.371-5.834-8.606-9.302-2.223-3.448-5.19-7.008-6.913-10.767-1.704-3.719-1.107-8.69-2.277-12.668-1.15-3.913-.759-8.281-1.349-12.4C19.663 96.06 19 91.982 19 87.803c0-4.178 2.794-7.953 3.369-11.974.59-4.12 1.441-7.801 2.592-11.713 1.17-3.979-.333-8.811 1.373-12.53 1.723-3.759 4.426-7.029 6.649-10.476 2.236-3.468 5.533-6.035 8.227-9.14 2.699-3.11 3.162-8.597 6.272-11.295 3.105-2.694 8.395-2.699 11.862-4.934 3.448-2.224 5.918-6.427 9.677-8.15 3.719-1.705 8.697-.204 12.675-1.374 3.913-1.151 7.637-2.654 11.756-3.244 4.022-.575 8.018-1.728 12.196-1.728 4.179 0 8.583-1.702 12.605-1.126 4.12.589 8.699.65 12.611 1.8 3.979 1.17 7.424 4.556 11.143 6.261 3.759 1.724 5.196 7.359 8.643 9.582 3.468 2.236 8.569 1.938 11.674 4.632 3.111 2.7 6.583 5.15 9.282 8.261a88.733 88.733 0 0 1 7.469 9.966c2.223 3.447 2.108 8.15 3.831 11.909 1.705 3.72 3.362 7.284 4.532 11.262 1.15 3.913.631 7.956 1.22 12.076.576 4.021 2.063 7.757 2.063 11.935 0 4.179-1.059 7.976-1.635 11.998-.589 4.12 2.524 8.991 1.374 12.903-1.17 3.978-7.22 6.027-8.925 9.746-1.723 3.759 1.141 9.979-1.082 13.428-2.236 3.467-8.194 4.202-10.888 7.306-2.699 3.112-2.788 8.88-5.899 11.578-3.105 2.695-5.935 6.454-9.403 8.69-3.448 2.223-8.632 1.96-12.391 3.684-3.719 1.705-8.238 1.277-12.216 2.447-3.912 1.15-7.479 3.951-11.599 4.54-4.021.575-8.231 2.347-12.409 2.347" fill="url(#header-sun-c)"/>
-				</svg>
-			</div>
-            <div class="container">
-                <div class="site-header-inner">
-                    <div class="brand header-brand">
-                        <h1 class="m-0">
-                            <a href="#">
-                                <svg width="44" height="32" viewBox="0 0 44 32" xmlns="http://www.w3.org/2000/svg">
-                                    <title>Polyglot.Network</title>
-                                    <defs>
-                                        <linearGradient x1="97.927%" y1="0%" x2="1.669%" y2="0%" id="logo-a">
-                                            <stop stop-color="#82DDFC" offset="0%"/>
-                                            <stop stop-color="#0181F6" offset="100%"/>
-                                        </linearGradient>
-                                        <linearGradient x1="96.64%" y1="1.497%" x2="0%" y2="44.56%" id="logo-b">
-                                            <stop stop-color="#A3A9F1" offset="0%"/>
-                                            <stop stop-color="#6A72E4" offset="99.203%"/>
-                                            <stop stop-color="#6A6FEC" offset="100%"/>
-                                        </linearGradient>
-                                    </defs>
-                                    <path d="M0 16h8a8 8 0 1 0 16 0h8c0 8.837-7.163 16-16 16S0 24.837 0 16z" fill="url(#logo-a)"/>
-                                    <path d="M12 0h8a8 8 0 1 0 16 0h8c0 8.837-7.163 16-16 16S12 8.837 12 0z" fill="url(#logo-b)" transform="rotate(180 28 8)"/>
-                                </svg>
-                            </a>
-                        </h1>
+<body>
+
+    <div class="relative bg-indigo-700 overflow-hidden">
+        <div class="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
+          <svg class="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0" width="364" height="384" viewBox="0 0 364 384" fill="none">
+            <defs>
+              <pattern id="eab71dd9-9d7a-47bd-8044-256344ee00d0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="4" height="4" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="364" height="384" fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)" />
+          </svg>
+        </div>
+        <div class="relative pt-6 pb-16 sm:pb-24">
+          <main class="mt-8">
+            <div class="mx-auto max-w-7xl pb-8">
+              <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                <div class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+                  <div>
+                    <a href="mailto:team@polyglot.network" class="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
+                      <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">Want to talk?</span>
+                      <span class="ml-4 text-sm">Email us</span>
+                      <!-- Heroicon name: chevron-right -->
+                      <svg class="ml-2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                      </svg>
+                    </a>
+                    <h1 class="mt-4 text-2xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-4xl xl:text-5xl">
+                      <span class="text-indigo-400 md:block">We are your tech team's</span>
+                      <span class="md:block">polyglot open-source developer</span>
+                    </h1>
+                    <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                        We are a software development agency which exclusively works on open-source software across all programming languages. We <span class="text-white font-bold">commit to an SLA</span> and guarantee the delivery of exactly those features and bugfixes in your open-source dependencies that <span class="text-white font-bold">YOU</span> care about.
+                    </p>
+                    <p class="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">Worked with</p>
+                    <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
+                      <div class="flex flex-wrap items-start justify-between">
+                        <div class="flex justify-center px-1 mb-2">
+                          <img class="h-9 sm:h-10" src="https://uploads-ssl.webflow.com/5ddf04202b4aee3a7361f9c9/5ddf0e1c751bb1f44bbf50f3_Green%400svg.svg" alt="StaticKit">
+                        </div>
+
+                        <div class="flex justify-center px-1">
+                            <img class="h-9 sm:h-10" src="https://assets.zoomcar.com/assets/logo-f38397447048ccba047af6980364e92e.svg" alt="Workcation">
+                        </div>
+                        <div class="flex justify-center px-1">
+                            <img class="h-9 sm:h-10" src="https://assets-global.website-files.com/5df3223cbe804bf9518502ba/5f5fecd3a66a4117628cfb42_logo%20white.svg" alt="Tuple">
+                        </div>                        
+                      </div>
                     </div>
+                  </div>
                 </div>
+                <div class="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
+                  <div class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+                    <div class="">
+                        <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
+                        <iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrkAU4Sh2QowwpYl?backgroundColor=red" frameborder="0" onmousewheel="" width="100%" height="1000" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </header>
 
-        <main>
-            <section class="hero">
-                <div class="container">
-                    <div class="hero-inner">
-						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">Polyglot.Network</h1>
-	                        <p class="hero-paragraph">Our software engineers can fix &amp; improve your FOSS dependencies at a fraction of the cost by working with multiple corporate customers.</p>
-	                        <p class="hero-cta"><a class="button button-primary button-shadow" href="#jumptoform">Request a feature or bug-fix</a></p>
-						</div>
-						<div class="hero-illustration">
-							<div class="hero-media is-revealing" style="">
-                                <img src="dist/images/cover.png" alt="Our issue tracker"/>
-							</div>
+            <section class="bg-indigo-800">
+                <div class="max-w-7xl mx-auto md:grid md:grid-cols-2 md:px-6 lg:px-8">
+                  <div class="py-12 px-4 sm:px-6 md:flex md:flex-col md:py-16 md:pl-0 md:pr-10 md:border-r md:border-indigo-900 lg:pr-16">
+                    <!-- <div class="md:flex-shrink-0">
+                      <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-indigo-300.svg" alt="Tuple">
+                    </div> -->
+                    <blockquote class="mt-6 md:flex-grow md:flex md:flex-col">
+                      <div class="relative text-lg font-medium text-white md:flex-grow">
+                        <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-indigo-600" fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
+                          <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                        </svg>
+                        <p class="relative">
+                            At ZoomCar, we were struggling with adding some features in Metabase which happens to be written in Clojure. Developing that in-house would have been too slow &amp; costly. Polyglot team added this feature swiftly and provided support till the feature was merged upstream. I think this is a fantastic way to make open-source work for businesses.
+                        </p>
+                      </div>
+                      <footer class="mt-8">
+                        <div class="flex">
+                          <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
+                            <img class="h-12 w-12 rounded-full" src="dist/images/vinayak.png" alt="">
+                          </div>
+                          <div class="ml-4">
+                            <div class="text-base font-medium text-white">Vinayak Hegde</div>
+                            <div class="text-base font-medium text-indigo-200">CTO-in-Residence, Microsoft for Startups</div>
+                          </div>
                         </div>
-                    </div>
+                      </footer>
+                    </blockquote>
+                  </div>
+                  <div class="py-12 px-4 border-t-2 border-indigo-900 sm:px-6 md:py-16 md:pr-0 md:pl-10 md:border-t-0 md:border-l lg:pl-16">
+                    <!-- <div class="md:flex-shrink-0">
+                      <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-indigo-300.svg" alt="Workcation">
+                    </div> -->
+                    <blockquote class="mt-6 md:flex-grow md:flex md:flex-col">
+                      <div class="relative text-lg font-medium text-white md:flex-grow">
+                        <svg class="absolute top-0 left-0 transform -translate-x-3 -translate-y-2 h-8 w-8 text-indigo-600" fill="currentColor" viewBox="0 0 32 32">
+                          <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
+                        </svg>
+                        <p class="relative">
+                          At Zerodha, we use open-source very extensively. Polyglot.network offered a win-win approach for not just for the users like us but also for the FOSS projects, making the ecosystem healthier.
+                        </p>
+                      </div>
+                      <footer class="mt-8">
+                        <div class="flex">
+                          <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
+                            <img class="h-12 w-12 rounded-full" src="dist/images/kailash.jpg" alt="">
+                          </div>
+                          <div class="ml-4">
+                            <div class="text-base font-medium text-white">Kailash Nadh</div>
+                            <div class="text-base font-medium text-indigo-200">CTO, Zerodha</div>
+                          </div>
+                        </div>
+                      </footer>
+                    </blockquote>
+                  </div>
                 </div>
-            </section>
+              </section>
 
-            <section class="clients section">
-                <div class="container">
-                    <div class="clients-inner section-inner">
-                        <div class="container-sm">
-                            <ul class="list-reset mb-0">
-                                <li>
-                                    <span class="clientlogo">ZoomCar</span>
-                                </li>
-                                <li>
-                                    <span class="clientlogo">Helix Learning</span>
-                                </li>
-                                <li>
-                                    <span class="clientlogo">Acyclic Labs</span>
-                                </li>
-                                <li>
-                                    <span class="clientlogo">Indium.Network</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="bg-gray-50">
+                <div class="max-w-7xl mx-auto py-16 px-4 divide-y-2 divide-gray-200 sm:py-24 sm:px-6 lg:px-8">
+                  <h2 class="text-3xl font-extrabold text-gray-900">
+                    Frequently asked questions
+                  </h2>
+                  <div class="mt-6 pt-10">
+                    <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12">
+                      <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                          How does it work?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                          Your engineers forward to us the open-source feature requests or bugs they care about - either via email or by tagging us on GitHub/GitLab comments. Your CTO sets our priorities once every month. We then work with upstream maintainers, in-house developers and freelancers to get these tasks done with high quality and reliability. You get the improvements you want, open-source developers get paid, and the open-source ecosystem keeps improving. Everybody wins.
+                        </dd>
+                      </div>
+              
+                      <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                          Why not GitHub Sponsors or TideLift or BountySource?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                          With Polyglot.Network, you only pay for the improvements that YOU value, not for mere <i>support</i> or <i>maintenance</i>. We take accountability and commit to a reasonable SLA. We work completely on your behalf in your interest and nobody else.
+                        </dd>
+                      </div>
+              
+                      <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                          What is the pricing model?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                          Think of us as a polyglot open-source developer on your team. You buy developer-seats on a monthly basis and we deliver equivalent work output. Because we only work on open-source, no proprietary info needs to be shared and no NDAs need to be signed.
+                        </dd>
+                      </div>
+
+                      <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                          What open-source projects and programming languages have you worked with?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                          So far, we have worked with Javascript, Pytho, Ruby, Java, Golang, Flutter, Kotlin, Swift, Clojure, Elixir, Haskell, C/C++, Rust and more. Some of the projects that we have contributed to are Django, PostgreSQL, Metabase, Ruby gems, miscellaneous React and Swift libraries. Our founders have built high-growth tech companies themselves and have more than 15+ years of experience building systems on Web/Mobile/ML.
+                        </dd>
+                      </div>
+
+                      <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                          Do you work with upstream maintainers?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                          Yes, that's our most preferred approach. However, as YOUR team member, we are completely dedicated to your needs and therefore, we also work with in-house developers and freelancers whenever appropriate. Our first priority is to deliver the features and bugfixes that <span class="font-bold">you</span> value.
+                        </dd>
+                      </div>
+              
+                      <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                          But we want to do open-source development in house!
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                          You're of course free to do that. You can use us for the boring open-source tasks. But fundamentally, public goods are best financed via coordination. By delegating the open-source work, we <a class="text-indigo-500 underline" href="https://polyglot.network/about/" target="_blank">avoid the tragedy of commons</a> and share the gains, and your team can focus on core product development - without you having to hire developers with non-core skills.
+                        </dd>
+                      </div>
+              
+                      <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                          Will you end up creating and maintaining forks of upstream FOSS projects?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                          Our pricing model incentivizes us to merge our changes into upstream repos. However, there can be occasional conflicts between users' and maintainers' interests. In every situation, we will truly act like <b>your</b> team member and always do the right thing.
+                        </dd>
+                      </div>
+
+                      <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                          I just want to pay for one specific feature and will not have a need for recurring FOSS work.
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                          We have done this for some customers in the past. <a href="mailto:team@polyglot.network">Email us</a> to discuss your particular situation further.
+                        </dd>
+                      </div>
+
+                      <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                          Is all open-source development priced at the same rate?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                          We will provide you effort estimate, before embarking on a complex task. The effective billing rate will depend on how many other customers are sponsoring work on the same OSS component. We have a sliding-scale model to appropriately price this.
+                        </dd>
+                      </div>
+
+                      <div>
+                        <dt class="text-lg leading-6 font-medium text-gray-900">
+                          What if the upstream refuses your changes?
+                        </dt>
+                        <dd class="mt-2 text-base text-gray-500">
+                          Yes, open-source projects have certain inherent risks. For example, upstream may not want to merge a feature you have asked either because of a conflict of interest (in case, they want to protect the proprietary edition) or architectural or product disagreements. These risks exist even if your team does the open-source work in-house. But with a reasonable volume of work, it becomes possible for us to commit to a certain proportion of delivery. Our pricing model takes this risk into account.
+                        </dd>
+                      </div>
+
+                    </dl>
+                  </div>
                 </div>
-            </section>
+              </div>
 
-            <section class="features-extended section">
-                <div class="container">
-                    <div class="features-extended-inner section-inner has-top-divider">
-                        <div class="features-extended-header text-center">
-                            <div class="container-sm">
-                                <h2 class="section-title mt-0">Meet polyglot.network</h2>
-                                <p class="section-paragraph">We're a developer agency that improves YOUR open-source dependencies - across languages & frameworks. By distributing the costs over multiple clients, we can make FOSS contribution justifiable in term of return-on-investment.</p>
-                            </div>
-                        </div>
-                        <div class="feature-extended">
-                            <div class="feature-extended-image is-revealing">
-                                <svg width="480" height="320" viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <defs>
-                                        <path id="features-1-a" d="M13 0h340v240H13z"/>
-                                        <linearGradient x1="50%" y1="0%" x2="4.666%" y2="38.561%" id="features-1-b">
-                                            <stop stop-color="#FFE4A2" offset="0%"/>
-                                            <stop stop-color="#FFC570" offset="100%"/>
-                                        </linearGradient>
-                                        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="features-1-c">
-                                            <stop stop-color="#2EF8C1" offset="0%"/>
-                                            <stop stop-color="#5FFAD0" offset="100%"/>
-                                        </linearGradient>
-                                        <filter id="dropshadow-1" x="-500%" y="-500%" width="1000%" height="1000%">
-                                            <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#E7EBF6" flood-opacity="1" />
-                                        </filter>
-										<filter x="-500%" y="-500%" width="1000%" height="1000%" filterUnits="objectBoundingBox" id="dropshadow-f-1">
-											<feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter"/>
-											<feGaussianBlur stdDeviation="24" in="shadowOffsetOuter" result="shadowBlurOuter"/>
-											<feColorMatrix values="0 0 0 0 0.06 0 0 0 0 0.13 0 0 0 0 0.34 0 0 0 0.14 0" in="shadowBlurOuter"/>
-										</filter>
-                                    </defs>
-                                    <g fill="#F4F7FE">
-                                        <path d="M281.984 251.89c88.366 0 65.883-12.77 65.883-101.136S378.366 0 290 0 .043 62.388.043 150.754c0 88.365 193.576 101.137 281.941 101.137z"/>
-                                        <path d="M382.88 319.917c33.137 0 96.563-56.96 96.563-90.098 0-33.137-82.61-7.086-115.746-7.086-33.137 0-27.301-5.2-27.301 27.938 0 33.137 13.347 69.246 46.484 69.246z"/>
-                                    </g>
-                                    <g transform="translate(57 40)">
-										<use fill="#FFF" xlink:href="#features-1-a" style="mix-blend-mode:multiply;filter:url(#dropshadow-f-1)"/>
-                                        <use fill="#FFF" xlink:href="#features-1-a"/>
-                                        <path d="M41.53 58.446C31.926 59.796 22.195 66.22 13 75.888v76.918c8.824-10.661 18.335-18.522 28.53-19.954 43.753-6.15 103.475 17.59 70.166 0-33.308-17.59-26.413-80.555-70.165-74.406z" fill="#FF9083"/>
-                                        <path d="M350.002 75.426c-21.168-10.785-64.642 27.763-75.428 48.93-10.785 21.168 39.112-19.155 60.28-8.37 8.496 4.329 14.02 11.38 18.146 16.9V77.136a42.51 42.51 0 0 0-2.998-1.709z" fill="#FFE9E7"/>
-                                        <path d="M101.252 71.947l-15.99 3.362-13.844 9.55-16.191-2.896-16.002.685-11.23 16.377-11.617 15.88c.897-.248-.229-.248-3.378 0v4.63c2.796-.056 4.72-.056 5.771 0l13.016-15.299 10.25-16.311 14.61-.043 14.869-2.487 15.086-3.598 14.86-4.954 13.644-6.775 14.439 9.359 14.47 9.994 15.46 6.435 15.691-3.123 14.356-9.018 16.961-4.307-2.498-3.217-14.348 6.003-15.466 4.731-14.526 6.572-14.131-10.298-16.061-7.536L115.623 65l-14.371 6.947z" fill="url(#features-1-b)"/>
-                                    </g>
-                                    <circle fill="#FFF" cx="293" cy="256" r="40" style="mix-blend-mode:multiply;filter:url(#dropshadow-f-1)"/>
-									<circle fill="#FFF" cx="293" cy="256" r="40"/>
-                                    <path d="M261.087 181l-25.875 26.383-27.797 22.242L187 258.198l48.427.732-9.741 46.869 26.914-23.553 20.281-29.412 28.216-25.869-48.446-.373L261.087 181zm-34.554 45.736l24.909-28.358-7.837 35.816 45.929-1.117-31.869 26.36-25.067 33.697 8.631-38.989-44.945.239 30.249-27.648z" fill="url(#features-1-c)"/>
-                                </svg>
-                            </div>
-                            <div class="feature-extended-body">
-                                <h3 class="mt-0">Open-source funding is broken</h3>
-                                <p>It's a tragedy of the commons, hurting us all. <a href="/about/"><u>Read our analysis of this problem here</u></a>.</p>
-                            </div>
-                        </div>
-                        <div class="feature-extended">
-                            <div class="feature-extended-image is-revealing">
-                                <svg width="480" height="320" viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <defs>
-                                        <path id="feature-2-a" d="M0 17h340v240H0z"/>
-                                        <path d="M104.361 69c5.222-9.45 8.194-20.1 8.194-31.66 0-36.45-19.827 0-56.278 0C19.827 37.34 0-25.017 0 11.434 0 29.047 2.36 50.913 8.91 69h95.451z" id="feature-2-b"/>
-                                        <linearGradient x1="50%" y1="0%" x2="4.666%" y2="38.561%" id="feature-2-c">
-                                            <stop stop-color="#FFE4A2" offset="0%"/>
-                                            <stop stop-color="#FFC570" offset="100%"/>
-                                        </linearGradient>
-                                        <path id="feature-2-f" d="M169.569 25.569h80v80h-80z"/>
-										<filter x="-500%" y="-500%" width="1000%" height="1000%" filterUnits="objectBoundingBox" id="dropshadow-f-2">
-											<feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter"/>
-											<feGaussianBlur stdDeviation="24" in="shadowOffsetOuter" result="shadowBlurOuter"/>
-											<feColorMatrix values="0 0 0 0 0.06 0 0 0 0 0.13 0 0 0 0 0.34 0 0 0 0.14 0" in="shadowBlurOuter"/>
-										</filter>
-                                    </defs>
-                                    <g fill="none" fill-rule="evenodd">
-                                        <path d="M456.32 303.547c88.366 0-106.453-64.428-106.453-152.793C349.867 62.388 380.366 0 292 0S2.043 62.388 2.043 150.754c0 88.365 365.912 152.793 454.277 152.793z" fill="#F4F7FE"/>
-                                        <g transform="translate(70 23)">
-                                            <use fill="#FFF" xlink:href="#feature-2-a" style="mix-blend-mode:multiply;filter:url(#dropshadow-f-2)"/>
-											<use fill="#FFF" xlink:href="#feature-2-a"/>
-                                            <path d="M31.625 123.62c33.137 0 18.98 85.493 18.98 52.356 0-33.137 100.43-91.442 67.293-91.442-20.35 0-77.099-9.132-117.898-8.503v47.317c10.468.547 21.558.272 31.625.272z" fill="#FFE5F1"/>
-                                            <g transform="translate(140 189)">
-                                                <mask id="feature-2-d" fill="#fff">
-                                                    <use xlink:href="#feature-2-b"/>
-                                                </mask>
-                                                <use fill="#FF6DB1" xlink:href="#feature-2-b"/>
-                                                <path d="M38 64C2.71 64-26 35.29-26 0S2.71-64 38-64v4C4.916-60-22-33.084-22 0S4.916 60 38 60 98 33.084 98 0h4c0 35.29-28.71 64-64 64zm0-20C13.738 44-6 24.262-6 0s19.738-44 44-44v4C15.944-40-2-22.056-2 0s17.944 40 40 40S78 22.056 78 0h4c0 24.262-19.738 44-44 44zm0-20C24.767 24 14 13.234 14 0s10.767-24 24-24v4c-11.028 0-20 8.972-20 20s8.972 20 20 20 20-8.972 20-20h4c0 13.234-10.767 24-24 24z" fill="url(#feature-2-c)" mask="url(#feature-2-d)"/>
-                                            </g>
-                                            <g transform="rotate(45 209.569 65.569)">
-                                                <use fill="#000" filter="url(#feature-2-e)" xlink:href="#feature-2-f"/>
-                                                <use fill="#FFF" xlink:href="#feature-2-f" style="mix-blend-mode:multiply;filter:url(#dropshadow-f-2)"/>
-												<use fill="#FFF" xlink:href="#feature-2-f"/>
-                                            </g>
-                                            <path fill="#6A72E4" d="M154.307 0l-32.023 5.12L98.602 29.28 92 61.86l7.24 32.212 24.385 22.215 31.416 9.954 33.082-7.08 21.539-25.772 11.769-32.35-6.125.919-9.676 29.102-20.67 22.63-29.919 6.482-29.196-7.732-21.477-21.331-9.361-29.25 7.244-30.474 23.175-20.831L154.419.165z"/>
-                                            <path fill="#A3A9F1" d="M155.041 107.506l-32.137-13.509-10.217-32.136 11.426-30.928 30.857-12.855.048 3.718-27.333 12.71-11.828 27.355 11.467 27.717 27.717 11.155 29.33-9.54 10.83-29.274 2.194.484-11.986 29.826z"/>
-                                            <path fill="#6A72E4" d="M155.041 85.403l-23.39-23.542 23.436-24.15-.298 3.456-20.48 20.694 20.732 20.874 19.406-21.089 3.877.432z"/>
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="feature-extended-body">
-                                <h3 class="mt-0">Coordination can reduce costs</h3>
-                                <p>An external dev agency, by combining the efforts, can improve FOSS at a much lower cost.</p>
-                            </div>
-                        </div>
-                        <div class="feature-extended">
-                            <div class="feature-extended-image is-revealing">
-                                <svg width="480" height="320" viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <defs>
-                                        <path id="features-3-a" d="M0 0h320v240H0z"/>
-										<filter x="-500%" y="-500%" width="1000%" height="1000%" filterUnits="objectBoundingBox" id="dropshadow-f-3">
-											<feOffset dy="16" in="SourceAlpha" result="shadowOffsetOuter"/>
-											<feGaussianBlur stdDeviation="24" in="shadowOffsetOuter" result="shadowBlurOuter"/>
-											<feColorMatrix values="0 0 0 0 0.06 0 0 0 0 0.13 0 0 0 0 0.34 0 0 0 0.14 0" in="shadowBlurOuter"/>
-										</filter>
-                                    </defs>
-                                    <g fill="none" fill-rule="evenodd">
-                                        <g fill="#F4F7FE">
-                                            <path d="M465.727 112.934c33.137 0-5.727-64.359-5.727-97.496s-20.974-2.617-54.111-2.617S340-17.699 340 15.438s92.59 97.496 125.727 97.496zM454.277 319.202c88.366 0-106.453-64.427-106.453-152.793S0 41.866 0 166.409s365.912 152.793 454.277 152.793z"/>
-                                        </g>
-                                        <g transform="translate(80 40)">
-                                            <use fill="#FFF" xlink:href="#features-3-a" style="mix-blend-mode:multiply;filter:url(#dropshadow-f-2)"/>
-											<use fill="#FFF" xlink:href="#features-3-a"/>
-                                            <path d="M131.594 185.875c33.137 0-88.594-28.109-88.594-61.246 0-22.23-19.932-41.805-43-52.281v75.216c33.425 22.264 106.39 38.311 131.594 38.311z" fill="#FFF6E7"/>
-                                            <path d="M320 62.182c-27.86.37-87.107 29.127-111.969 29.127-33.137 0 56.035 22.472 56.035 55.609 0 19.031 26.93 26.733 55.934 29.84V62.182z" fill="#FFC570"/>
-                                        </g>
-                                        <path fill="#FFF" d="M216 24h80v80h-80z" style="mix-blend-mode:multiply;filter:url(#dropshadow-f-2)"/>
-										<path fill="#FFF" d="M216 24h80v80h-80z"/>
-                                        <path d="M267 85h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4z" fill="#5FFAD0"/>
-                                        <path d="M126 197.156l23.039 15.424L173.495 225l23.756-13.614L223 198.298l-12.63-5.63 5.38 4.892-21.271 12.342-20.984 13.869-21.457-13.07-21.796-12.346 10.232-4.303L137.77 191 126 197.156zm82.883-5.15l1.486.662-1.087-.987-.399.325z" fill="#82DDFC"/>
-                                        <path fill="#0181F6" d="M206.966 215.77l8.251 3.372-21.268 11.975-20.62 13.946-20.588-14.002-20.915-12.222 6.688-4.057-1.038-1.43L124 220.1l25.242 13.641L173.329 249l23.105-16.848L221 219.166 209.293 213zM149.437 163.074L125 176.071l22.751 15.829 24.857 13.1 24.829-13.168L222 176.072l-24.713-15.532-24.68-11.54-23.17 14.074zm3.109 23.94l-21.518-10.943 21.488-11.009 20.092-12.469 20.238 12.238 23.199 11.24-21.69 13.775-21.747 11.489-20.062-14.32z"/>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="feature-extended-body">
-                                <h3 class="mt-0">Reliable</h3>
-                                <p>We provide your tech team an issue-tracker and work pretty much like an external agency.</p>
-                            </div>
-                        </div>
+              <div class="bg-indigo-700">
+                <div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+                  <div class="space-y-8 sm:space-y-12">
+                    <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+                      <h2 class="text-3xl text-white font-extrabold tracking-tight sm:text-4xl">The People</h2>
                     </div>
-                </div>
-            </section>
-
-			<section class="testimonials section">
-				<div class="container">
-					<div class="testimonials-inner section-inner">
-						<h2 class="section-title mt-0 text-center">Testimonials</h2>
-						<div class="testimonials-wrap">
-							<div class="testimonial text-center text-xs is-revealing">
-								<div class="testimonial-inner">
-									<div class="testimonial-main">
-										<div class="testimonial-header">
-											<img class="mb-16" src="/anonboy1.png" alt="Testimonial">
-										</div>
-										<div class="testimonial-body">
-											<p>We were struggling with adding some enhancements in Metabase. Developing those in-house proved to be too slow & costly. Polyglot team did it swiftly with us not having to maintain a fork!</p>
-										</div>
-									</div>
-									<div class="testimonial-footer">
-										<div class="testimonial-name">Sneh</div>
-										<div class="testimonial-link">
-											<a href="https://zoomcar.com" target="_blank">zoomcar.com</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="testimonial text-center text-xs is-revealing">
-								<div class="testimonial-inner">
-									<div class="testimonial-main">
-										<div class="testimonial-header">
-											<img class="mb-16" src="/anongirl1.png" alt="Testimonial">
-										</div>
-										<div class="testimonial-body">
-											<p>Polyglot allowed us to tap into a really excellent-and-affordable pool of developer talent and finish our project faster by fixing our Python & Javascript dependencies.</p>
-										</div>
-									</div>
-									<div class="testimonial-footer">
-										<div class="testimonial-name">Priyanka</div>
-										<div class="testimonial-link">
-											<a href="#">Helix Learning</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="testimonial text-center text-xs is-revealing">
-								<div class="testimonial-inner">
-									<div class="testimonial-main">
-										<div class="testimonial-header">
-											<img class="mb-16" src="/anonboy2.png" alt="Testimonial">
-										</div>
-										<div class="testimonial-body">
-											<p>We ran into a couple of Django bugs and Polyglot helped us fix them quickly and affordably.</p>
-										</div>
-									</div>
-									<div class="testimonial-footer">
-										<div class="testimonial-name">Ani</div>
-										<div class="testimonial-link">
-											<a href="https://acycliclabs.com" target="_blank">acycliclabs.com</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-            <!-- <section class="pricing section">
-                <div class="container">
-                    <div class="pricing-inner section-inner">
-                        <h2 class="section-title mt-0 text-center">Pricing</h2>
-                        <div class="pricing-tables-wrap">
-                            <div class="pricing-table is-revealing">
-                                <div class="pricing-table-inner">
-                                    <div class="pricing-table-main">
-                                        <div class="pricing-table-header">
-                                            <div class="pricing-table-title mt-12 mb-16">Monthly</div>
-                                            <div class="pricing-table-price pb-32"><span class="pricing-table-price-currency h3">$</span><span class="pricing-table-price-amount h1">1,999</span>/seat</div>
-                                        </div>
-                                        <ul class="pricing-table-features list-reset text-xs">
-                                            <li>
-                                                <span>800 points = 160 developer hours</span>
-                                            </li>
-                                            <li>
-                                                <span>SLA: 2/3rd points delivered in 30 days</span>
-                                            </li>
-                                            <li>
-                                                <span>Refund for shortfall, if any</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-table-cta">
-                                        <a class="button button-primary button-shadow button-block" href="mailto:team@polyglot.network">Contact Us</a>
-                                    </div>
-                                </div>
+                    <ul class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-6">
+                      <li>
+                        <div class="space-y-4">
+                          <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="dist/images/nilesh.jpg" alt="">
+                          <div class="space-y-2">
+                            <div class="text-xs font-medium lg:text-sm">
+                              <h3 class="text-white">Nilesh Trivedi</h3>
+                              <p class="text-indigo-300">Ruby, Dart</p>
                             </div>
-                            <div class="pricing-table pricing-table-primary text-light is-revealing">
-                                <div class="pricing-table-inner">
-                                    <div class="pricing-table-main">
-                                        <div class="pricing-table-header">
-                                            <div class="pricing-table-title mt-12 mb-16">Custom</div>
-                                            <div class="pricing-table-price pb-32"><span class="pricing-table-price-currency h3"></span><span class="pricing-table-price-amount h1">Contact Us</span></div>
-                                        </div>
-                                        <ul class="pricing-table-features list-reset text-xs">
-                                            <li>
-                                                <span>Adaptive Pricing</span>
-                                            </li>
-                                            <li>
-                                                <span>Customized SLA</span>
-                                            </li>
-                                            <li>
-                                                <span>Compilation / Build services</span>
-                                            </li>
-                                            <li>
-                                                <span>Phone Support</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="pricing-table-cta">
-                                        <a class="button button-shadow button-block" href="#">Contact Us</a>
-                                    </div>
-                                </div>
-                            </div>
+                          </div>
                         </div>
-						<div class="pricing-faqs container-sm">
-	                        <ul class="accordion">
-	                            <li>
-	                                <div class="accordion-title">
-										<span>What if the upstream does not merge your pull requests?</span>
-										<div class="accordion-icon"></div>
-									</div>
-	                                <div class="accordion-body">
-	                                    <p>This is a valid concern due to the nature of FOSS projects. Our points-based model accounts for this and aligns incentives. We get paid 70% on feature-completion and the rest 30% on upstream merge.</p>
-	                                </div>
-	                            </li>
-								<li>
-									<div class="accordion-title">
-										<span>Where do you find developers?</span>
-										<div class="accordion-icon"></div>
-									</div>
-									<div class="accordion-body">
-										<p>We have an open, remote team of 50+ developers - covering skills such as Java, Python, Javascript, Ruby, Swift and much more. Remote work allows us to find the best talent from all over the world and we can pass on the benefits to you.</p>
-									</div>
-								</li>
-								<li>
-									<div class="accordion-title">
-										<span>Can we pay per-task instead of per-seat?</span>
-										<div class="accordion-icon"></div>
-									</div>
-									<div class="accordion-body">
-										<p>Yes, it can be considered on a case-by-case basis. We'd appreciate if you can bring a referral from any of our existing customers. Just write to us.</p>
-									</div>
-								</li>
-								<li>
-									<div class="accordion-title">
-										<span>Can you do custom work too?</span>
-										<div class="accordion-icon"></div>
-									</div>
-									<div class="accordion-body">
-										<p>Yes. Our point-based contribution model recognizes the continuous spectrum of the nature of software: from being a fully private good (custom work) to fully public good (popular FOSS).</p>
-									</div>
-								</li>
-	                        </ul>
-						</div>
-                    </div>
-                </div>
-            </section> -->
-            <p id="jumptoform">&nbsp;</p>
-            <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrkAU4Sh2QowwpYl?backgroundColor=red" frameborder="0" onmousewheel="" width="100%" height="1235" style="background: transparent; border: 1px solid #ccc;"></iframe>
-        </main>
+                      </li>
 
-        <footer class="site-footer">
-            <div class="container">
-                <div class="site-footer-inner">
-                    <div class="brand footer-brand">
-                        <a href="#">
-                            <svg width="44" height="32" viewBox="0 0 44 32" xmlns="http://www.w3.org/2000/svg">
-                                <title>Sienna</title>
-                                <defs>
-                                    <linearGradient x1="97.927%" y1="0%" x2="1.669%" y2="0%" id="logo-footer-a">
-                                        <stop stop-color="#82DDFC" offset="0%"/>
-                                        <stop stop-color="#0181F6" offset="100%"/>
-                                    </linearGradient>
-                                    <linearGradient x1="96.64%" y1="1.497%" x2="0%" y2="44.56%" id="logo-footer-b">
-                                        <stop stop-color="#A3A9F1" offset="0%"/>
-                                        <stop stop-color="#6A72E4" offset="99.203%"/>
-                                        <stop stop-color="#6A6FEC" offset="100%"/>
-                                    </linearGradient>
-                                </defs>
-                                <path d="M0 16h8a8 8 0 1 0 16 0h8c0 8.837-7.163 16-16 16S0 24.837 0 16z" fill="url(#logo-footer-a)"/>
-                                <path d="M12 0h8a8 8 0 1 0 16 0h8c0 8.837-7.163 16-16 16S12 8.837 12 0z" fill="url(#logo-footer-b)" transform="rotate(180 28 8)"/>
-                            </svg>
-                        </a>
-                    </div>
-                    <ul class="footer-links list-reset">
-                        <li>
-                            <a href="/about/">About us</a>
-                        </li>
+                      <li>
+                        <div class="space-y-4">
+                          <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="dist/images/anirudh.jpg" alt="">
+                          <div class="space-y-2">
+                            <div class="text-xs font-medium lg:text-sm">
+                              <h3 class="text-white">Kumar Anirudh</h3>
+                              <p class="text-indigo-300">Python & Javascript</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="space-y-4">
+                          <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="dist/images/dmitri.jpg" alt="">
+                          <div class="space-y-2">
+                            <div class="text-xs font-medium lg:text-sm">
+                              <h3 class="text-white">Dmitri Ivonin</h3>
+                              <p class="text-indigo-300">Clojure & Haskell</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="space-y-4">
+                          <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="dist/images/christopher.jpg" alt="">
+                          <div class="space-y-2">
+                            <div class="text-xs font-medium lg:text-sm">
+                              <h3 class="text-white">Christopher H</h3>
+                              <p class="text-indigo-300">C, Rust</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="space-y-4">
+                          <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="dist/images/patricia.jpg" alt="">
+                          <div class="space-y-2">
+                            <div class="text-xs font-medium lg:text-sm">
+                              <h3 class="text-white">Patricia Levine</h3>
+                              <p class="text-indigo-300">Javascript, Java</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="space-y-4">
+                          <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="dist/images/andrew.jpg" alt="">
+                          <div class="space-y-2">
+                            <div class="text-xs font-medium lg:text-sm">
+                              <h3 class="text-white">Andrew Berson</h3>
+                              <p class="text-indigo-300">Python, Julia</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="space-y-4">
+                          <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="dist/images/matt.jpg" alt="">
+                          <div class="space-y-2">
+                            <div class="text-xs font-medium lg:text-sm">
+                              <h3 class="text-white">Matt Morrison</h3>
+                              <p class="text-indigo-300">Erlang, Elixir, Java</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="space-y-4">
+                          <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="dist/images/ben.jpg" alt="">
+                          <div class="space-y-2">
+                            <div class="text-xs font-medium lg:text-sm">
+                              <h3 class="text-white">Kashyap K</h3>
+                              <p class="text-indigo-300">Python, Swift, Kotlin</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="space-y-4">
+                          <img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="dist/images/samantha.jpg" alt="">
+                          <div class="space-y-2">
+                            <div class="text-xs font-medium lg:text-sm">
+                              <h3 class="text-white">Samantha Essa</h3>
+                              <p class="text-indigo-300">C, C++, Lisp</p>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
                     </ul>
-                    <ul class="footer-social-links list-reset">
-                        <li>
-                            <a href="https://github.com/PolyglotNetwork/" target="_blank">
-                                <span class="screen-reader-text">GitHub</span>
-                                <svg role="img" viewBox="0 0 24 24" width="24" height="24" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/polyglot_devs" target="_blank">
-                                <span class="screen-reader-text">Twitter</span>
-                                <svg role="img" viewBox="0 0 24 24" width="24" height="24" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><title>Twitter icon</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://medium.com/@polyglot_network" target="_blank">
-                                <span class="screen-reader-text">Medium</span>
-                                <svg role="img" viewBox="0 0 24 24" width="24" height="24" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><title>Medium icon</title><path d="M0 0v24h24V0H0zm19.938 5.686L18.651 6.92a.376.376 0 0 0-.143.362v9.067a.376.376 0 0 0 .143.361l1.257 1.234v.271h-6.322v-.27l1.302-1.265c.128-.128.128-.165.128-.36V8.99l-3.62 9.195h-.49L6.69 8.99v6.163a.85.85 0 0 0 .233.707l1.694 2.054v.271H3.815v-.27L5.51 15.86a.82.82 0 0 0 .218-.707V8.027a.624.624 0 0 0-.203-.527L4.019 5.686v-.27h4.674l3.613 7.923 3.176-7.924h4.456v.271z"/></svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://discord.gg/p8QRftG" target="_blank">
-                                <span class="screen-reader-text">Discord</span>
-                                <svg role="img" viewBox="0 0 24 24" width="24" height="24" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><title>Discord icon</title><path d="M20.222 0c1.406 0 2.54 1.137 2.607 2.475V24l-2.677-2.273-1.47-1.338-1.604-1.398.67 2.205H3.71c-1.402 0-2.54-1.065-2.54-2.476V2.48C1.17 1.142 2.31.003 3.715.003h16.5L20.222 0zm-6.118 5.683h-.03l-.202.2c2.073.6 3.076 1.537 3.076 1.537-1.336-.668-2.54-1.002-3.744-1.137-.87-.135-1.74-.064-2.475 0h-.2c-.47 0-1.47.2-2.81.735-.467.203-.735.336-.735.336s1.002-1.002 3.21-1.537l-.135-.135s-1.672-.064-3.477 1.27c0 0-1.805 3.144-1.805 7.02 0 0 1 1.74 3.743 1.806 0 0 .4-.533.805-1.002-1.54-.468-2.14-1.404-2.14-1.404s.134.066.335.2h.06c.03 0 .044.015.06.03v.006c.016.016.03.03.06.03.33.136.66.27.93.4.466.202 1.065.403 1.8.536.93.135 1.996.2 3.21 0 .6-.135 1.2-.267 1.8-.535.39-.2.87-.4 1.397-.737 0 0-.6.936-2.205 1.404.33.466.795 1 .795 1 2.744-.06 3.81-1.8 3.87-1.726 0-3.87-1.815-7.02-1.815-7.02-1.635-1.214-3.165-1.26-3.435-1.26l.056-.02zm.168 4.413c.703 0 1.27.6 1.27 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334.002-.74.573-1.338 1.27-1.338zm-4.543 0c.7 0 1.266.6 1.266 1.335 0 .74-.57 1.34-1.27 1.34-.7 0-1.27-.6-1.27-1.334 0-.74.57-1.338 1.27-1.338z"/></svg>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="footer-copyright">&copy; 2019 Polyglot.Network, all rights reserved</div>
+                  </div>
                 </div>
-            </div>
-        </footer>
-    </div>
+              </div>
+          </main>
+        </div>
+      </div>
 
-    <script src="dist/js/main.min.js"></script>
+      <footer class="bg-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+          <div class="flex justify-center space-x-6 md:order-2">
+      
+            <a href="https://twitter.com/polyglot_devs" target="_blank" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">Twitter</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+              </svg>
+            </a>
+      
+            <a href="https://github.com/PolyglotNetwork/" target="_blank" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">GitHub</span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+              </svg>
+            </a>
+      
+
+          </div>
+          <div class="mt-8 md:mt-0 md:order-1">
+            <p class="text-center text-base text-gray-400">
+              <a href="mailto:team@polyglot.network"><u>Email Us</u></a>
+            </p>
+          </div>
+        </div>
+      </footer>
 </body>
 </html>
